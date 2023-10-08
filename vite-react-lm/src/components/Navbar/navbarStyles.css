@@ -1,0 +1,13 @@
+.poke-logo {
+    width: 11em;
+    height: auto;
+}
+
+.active {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.inactive {
+    color: black;
+}

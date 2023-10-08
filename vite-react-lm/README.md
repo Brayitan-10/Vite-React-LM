@@ -58,3 +58,72 @@ function styleHandler() {
  // function inputHandler(e) {
   //   setName(e.target.value);
   // }
+
+// <div className='card'>
+          //   <div>
+          //     <img src={pokemon.sprites.other.dream_world.front_default} alt="" />
+          //   </div>
+          //   <span>{pokemon.name}</span>
+          // </div>
+
+// function inputHandler(e) {
+  //   setName(e.target.value);
+  // }
+
+
+<>
+      <div className='card-container'>
+        {pokemon.map((pokemon) => (
+          <Card key={pokemon.id} style={{ width: '18rem', padding: "2em" }}>
+            <Card.Img variant="top" className='poke-img' src={pokemon.sprites.other.dream_world.front_default} />
+            <Card.Body>
+              <Card.Title>{pokemon.name}</Card.Title>
+              <Card.Text>
+                INFO DEL POKEMON
+              </Card.Text>
+              <Button variant="primary">More Information</Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div> <br />
+    </>
+
+
+const [pokemon, setPokemon] = useState([])
+
+  function searchHandler(e) {
+    let searchedPokemon = pokemon.filter((pokemon) => pokemon.name.includes(e.target.value))
+    console.log(searchedPokemon);
+
+    setPokemon(searchedPokemon)
+  }
+
+
+/* const [pokemon, setPokemon] = useState([]);
+  const [pokemonPerPage, setPokemonPerPage] = useState(20) //l=> limit
+  const [offset, setOffset] = useState(0)
+
+  async function pedidoApi() {
+    let data = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${pokemonPerPage}&offset=${offset}`);
+    let response = await data.json();
+    let arrayPokemon = [];
+
+    for (let i = 0; i < response.results.length; i++) {
+      const element = response.results[i];
+
+      let data = await fetch(element.url);
+      let responseData = await data.json();
+
+      arrayPokemon.push(responseData)
+    }
+    setPokemon(arrayPokemon);
+  }
+
+  useEffect(() => {
+    pedidoApi();
+  }, [offset]); */
+
+<h1>{pokemon.name ? capitalizeFirstLetter(pokemon.name) : "Cargando nombre"}</h1>
+      {pokemon.sprites ? <img src={pokemon.sprites.other.dream_world.front_default} alt="" /> : "Cargando Imagen"}
+
+ && pokemon.name && pokemon.sprites

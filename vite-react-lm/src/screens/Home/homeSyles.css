@@ -1,0 +1,20 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.poke-img {
+  height: 10em;
+}
+
+.card:hover {
+  background-color: rgba(153, 205, 50, 0.521);
+}
+
+/* .card img {
+  width: 141px;
+  height: 141px;
+} */

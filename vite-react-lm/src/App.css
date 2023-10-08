@@ -45,22 +45,7 @@ display: grid;
 justify-content: center;
 } */
 
-.card:hover {
-  background-color: rgba(153, 205, 50, 0.521);
-}
 
-.card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 22px;
-  justify-content: center;
-}
-
-.card img {
-  width: 141px;
-  height: 141px;
-}
 
 .read-the-docs {
   color: #888;
@@ -81,4 +66,10 @@ justify-content: center;
 
 h1 {
   font-family: 'Pixelify Sans', cursive;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
